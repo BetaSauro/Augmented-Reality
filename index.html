@@ -2,47 +2,90 @@
 <html class="">
 
 <head>
-    <title>Sistema Solar</title>
+    <title>Presentes</title>
     <meta charset="UTF-8">
-    <meta aframe-injected="" name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
+    <meta aframe-injected="" name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
     <meta aframe-injected="" name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta aframe-injected="" name="theme-color" content="black">
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
-    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-
-
+    <script
+        src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.0/dist/aframe-preloader-component.min.js"></script>
+</head>
 </head>
 
-<body style="margin: -251.5px 0px 0px; overflow: hidden; font-family: monospace; width: 1920px; height: 1440px;" class="">&lt;-DOCTYPE html&gt;
+<body style="margin: -251.5px 0px 0px; overflow: hidden; font-family: monospace; width: 1920px; height: 1440px;"
+    class="">&lt;-DOCTYPE html&gt;
 
-    <a-scene embedded="" arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" class="" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="">
+    <a-scene stats preloader gltf-model="dracoDecoderPath: data/draco;" embedded=""
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" class=""
+        inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="none">
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="models/solar.glb"></a-asset-item>
-        </a-assets>
 
-        <a-marker preset="hiro" position="" rotation="" scale="" visible="" material="" arjs-anchor="" arjs-hit-testing="">
-            <a-gltf-model src="#animated-asset" position="" rotation="" scale="0.1 0.1 0.1" visible="" gltf-model="" animation-mixer></a-gltf-model>
+            <a-asset-item id="bison" src="models/bison.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="dragon" src="models/dragon.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="fox" src="models/fox.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="island" src="models/island.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="llama" src="models/llama.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="savanna" src="models/savanna.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="crab" src="models/crab.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="trex" src="models/trex.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="veloci" src="models/veloci.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="indora" src="models/indora.gltf" preload="true"></a-asset-item>
+
+        </a-assets>
+        <!-- 
+    model.updateComponent('gltf-model', '#placa', 'models/placa.glb')
+    model.updateComponent('scale',{x:8,y:8,z:8})
+    model.updateComponent('position',{x:8,y:8,z:8})
+
+    model.object3D.scale.set(0.02,0.02,0.02)
+ -->
+        <!-- <a-marker preset='custom' type='pattern' url='./data/patt.hiro'> -->
+        <a-marker preset="hiro">
+            <a-gltf-model id='actual_m' src="#fox" position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" animation-mixer></a-gltf-model>
         </a-marker>
 
         <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
-        <!--         <canvas class="a-canvas" data-aframe-canvas="true" width="1920" height="1440"></canvas>
-        <div class="a-enter-vr embedded" aframe-injected="" style="position: fixed;"><button class="a-enter-vr-button" title="Enter VR mode with a headset or fullscreen mode on a desktop. Visit https://webvr.rocks or https://webvr.info for more information." aframe-injected=""></button></div>
-        <div class="a-orientation-modal a-hidden" aframe-injected=""><button aframe-injected="">Exit VR</button></div>
-        <a-entity light="" data-aframe-default-light="" aframe-injected="" position="" rotation="" scale="" visible=""></a-entity>
-        <a-entity light="" position="" data-aframe-default-light="" aframe-injected="" rotation="" scale="" visible=""></a-entity> -->
 
     </a-scene>
     <div class="controls">
-        <a href="coracao.html" class="btn">Coração</a>
-        <a href="dna.html" class="btn">DNA</a>
-        <a href="nefertiti.html" class="btn">Nefertiti</a>
-        <a href="praca.html" class="btn">Praça Sete</a>
-        <a href="index.html" class="btn">Sistema Solar</a> </div>
+        <a onclick="myFunction('bison', 0.08, 0 ,0 ,0,0,0,0);" class="btn">Bisão</a>
+        <a onclick="myFunction('dragon', 0.166, 0 ,0 ,0,0,0,0);" class="btn">Dragão</a>
+        <a onclick="myFunction('fox', 0.015, 0 ,0 ,0,0,0,0);" class="btn">Raposa</a>
+        <a onclick="myFunction('island', 0.008, 0 ,0 ,0,0,0,0);" class="btn">Ilha</a>
+        <a onclick="myFunction('llama', 0.015, 0 ,0 ,0,0,0,0);" class="btn">Lhama</a>
+        <a onclick="myFunction('savanna', 0.030, 0 ,0 ,0,0,-90.0,0);" class="btn">Savanna</a>
+        <a onclick="myFunction('crab', 0.30, 0 ,0 ,0,0,0,0);" class="btn">Carangueijo</a>
+        <a onclick="myFunction('veloci', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça Velociraptor</a>
+        <a onclick="myFunction('indora', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça Indoraptor</a>
+        <a onclick="myFunction('trex', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça T-Rex</a>
+
     </div>
+    <script>
+        var model = document.querySelector('#actual_m');
+        function myFunction(id, scale, x, y, z, rx, ry, rz) {
+            model.updateComponent('gltf-model', '#' + id, 'models/' + id + '.gltf');
+            model.object3D.scale.set(scale, scale, scale);
+            model.object3D.position.set(x, y, z);
+            model.object3D.rotation.set(rx, ry, rz);
+
+        }
+    </script>
 </body>
 
 </html>
