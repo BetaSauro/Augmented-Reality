@@ -2,7 +2,7 @@
 <html class="">
 
 <head>
-    <title>Presentes</title>
+    <title>Realidade Aumentada</title>
     <meta charset="UTF-8">
     <meta aframe-injected="" name="viewport"
         content="width=device-width,initial-scale=1,maximum-scale=1,shrink-to-fit=no,user-scalable=no,minimal-ui">
@@ -11,7 +11,7 @@
     <meta aframe-injected="" name="theme-color" content="black">
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/thomaspark/bootswatch/gh-pages/slate/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"
         integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
         crossorigin="anonymous"></script>
@@ -22,15 +22,14 @@
     <script src="https://aframe.io/releases/1.0.3/aframe.min.js"></script>
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
-    <script
-        src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.0/dist/aframe-preloader-component.min.js"></script>
+    <script src="https://cdn.rawgit.com/gladeye/aframe-preloader-component/1.0.0/dist/aframe-preloader-component.min.js"></script>
 </head>
 </head>
 
 <body style="margin: -251.5px 0px 0px; overflow: hidden; font-family: monospace; width: 1920px; height: 1440px;"
     class="">&lt;-DOCTYPE html&gt;
 
-    <a-scene stats preloader gltf-model="dracoDecoderPath: data/draco;" embedded=""
+    <a-scene stats  preloader="title: Loading....;" gltf-model="dracoDecoderPath: data/draco;" embedded=""
         arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;" class=""
         inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="none">
 
@@ -48,14 +47,7 @@
             <a-asset-item id="indora" src="models/indora.gltf" preload="true"></a-asset-item>
 
         </a-assets>
-        <!-- 
-    model.updateComponent('gltf-model', '#placa', 'models/placa.glb')
-    model.updateComponent('scale',{x:8,y:8,z:8})
-    model.updateComponent('position',{x:8,y:8,z:8})
 
-    model.object3D.scale.set(0.02,0.02,0.02)
- -->
-        <!-- <a-marker preset='custom' type='pattern' url='./data/patt.hiro'> -->
         <a-marker preset="hiro">
             <a-gltf-model id='actual_m' src="#fox" position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" animation-mixer></a-gltf-model>
         </a-marker>
@@ -70,9 +62,9 @@
         <a onclick="myFunction('island', 0.008, 0 ,0 ,0,0,0,0);" class="btn">Ilha</a>
         <a onclick="myFunction('llama', 0.015, 0 ,0 ,0,0,0,0);" class="btn">Lhama</a>
         <a onclick="myFunction('savanna', 0.030, 0 ,0 ,0,0,-90.0,0);" class="btn">Savanna</a>
-        <a onclick="myFunction('crab', 0.30, 0 ,0 ,0,0,0,0);" class="btn">Carangueijo</a>
-        <a onclick="myFunction('veloci', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça Velociraptor</a>
-        <a onclick="myFunction('indora', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça Indoraptor</a>
+        <a onclick="myFunction('crab', 0.30, 0.090 ,0.359 ,-0.125,0,135.0,0);" class="btn">Carangueijo</a>
+        <a onclick="myFunction('veloci', 0.55,0.285,0.5,-1.454,0,135,0);" class="btn">Cabeça Velociraptor</a>
+        <a onclick="myFunction('indora', 0.15, 0 ,0 ,0,0,135,0);" class="btn">Cabeça Indoraptor</a>
         <a onclick="myFunction('trex', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça T-Rex</a>
 
     </div>
