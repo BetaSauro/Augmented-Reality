@@ -35,23 +35,37 @@
 
         <a-assets>
 
-            <a-asset-item id="drone" src="models/drone.gltf" preload="true"></a-asset-item>
-            <a-asset-item id="robot" src="models/robot.gltf" preload="true"></a-asset-item>
-            <a-asset-item id="mvv" src="models/mvv.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="bison" src="models/bison.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="dragon" src="models/dragon.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="fox" src="models/fox.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="island" src="models/island.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="llama" src="models/llama.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="savanna" src="models/savanna.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="crab" src="models/crab.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="trex" src="models/trex.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="veloci" src="models/veloci.gltf" preload="true"></a-asset-item>
+            <a-asset-item id="indora" src="models/indora.gltf" preload="true"></a-asset-item>
 
         </a-assets>
-        
+
         <a-marker preset="hiro">
-            <a-gltf-model id='actual_m' src="#robot" position="-0.442 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" animation-mixer></a-gltf-model>
+            <a-gltf-model id='actual_m' src="#fox" position="0 0 0" rotation="0 0 0" scale="0.015 0.015 0.015" animation-mixer></a-gltf-model>
         </a-marker>
 
         <a-entity camera="" position="" rotation="" scale="" visible=""></a-entity>
 
     </a-scene>
     <div class="controls">
-        <a onclick="myFunction('drone', 1, 0 ,0 ,0,0,0,0);" class="btn">Drone</a>
-        <a onclick="myFunction('robot', 0.015, -0.442 ,0 ,0,0,0,0);" class="btn">Robô</a>
-        <a onclick="myFunction('mvv', 0.09, -1.364 ,0 ,0,-50.9,0,0);" class="btn">Missão/Visão/Valor</a>
+        <a onclick="myFunction('bison', 0.08, 0 ,0 ,0,0,0,0);" class="btn">Bisão</a>
+        <a onclick="myFunction('dragon', 0.166, 0 ,0 ,0,0,0,0);" class="btn">Dragão</a>
+        <a onclick="myFunction('fox', 0.015, 0 ,0 ,0,0,0,0);" class="btn">Raposa</a>
+        <a onclick="myFunction('island', 0.008, 0 ,0 ,0,0,0,0);" class="btn">Ilha</a>
+        <a onclick="myFunction('llama', 0.015, 0 ,0 ,0,0,0,0);" class="btn">Lhama</a>
+        <a onclick="myFunction('savanna', 0.030, 0 ,0 ,0,0,-90.0,0);" class="btn">Savanna</a>
+        <a onclick="myFunction('crab', 0.30, 0.090 ,0.359 ,-0.125,0,135.0,0);" class="btn">Carangueijo</a>
+        <a onclick="myFunction('veloci', 0.55,0.285,0.5,-1.454,0,135,0);" class="btn">Cabeça Velociraptor</a>
+        <a onclick="myFunction('indora', 0.15, 0 ,0 ,0,0,135,0);" class="btn">Cabeça Indoraptor</a>
+        <a onclick="myFunction('trex', 0.15, 0 ,0 ,0,0,0,0);" class="btn">Cabeça T-Rex</a>
 
     </div>
     <script>
